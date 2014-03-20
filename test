@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+app = File.read('app.rb')
+
+alphanumeric, non = app.chars.partition { |c| c[/[A-Za-z0-9]/] }.map(&:size)
+
+percent = (1 - alphanumeric / non.to_f) * 100
+
+puts "PwNbS is #{'%.2f' % percent}% non-alphanumeric!"
