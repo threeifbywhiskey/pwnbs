@@ -1,7 +1,18 @@
 %html
   %head
-    %title png2term
+    %title Programming with Nothing but Symbols
+
+    %script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+    %script(src='js/generate.js')
+    %script(src='js/highlight.js')
+    %link(rel='stylesheet' href='css/solarized_dark.css')
+
   %body
-    %form(method='post' action='interpret' enctype='multipart/form-data')
-      %input(type='file' name='file')
-      %input(type='submit')
+    %h1 Your Message
+    %form(method='post' action='generate' onsubmit='generate(); return false')
+      %input(type='text' id='msg' size='50')
+    %h1 The Code
+    %pre
+      %code#output.language-ruby
+    %pre
+      %code#smoosh.language-ruby
