@@ -7,9 +7,11 @@ Orginal Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmai
 body {
     text-align: center;
     background: url(../img/body.png) repeat;
+    margin-bottom: 1em;
 }
 
 h1 {
+    color: #b58900;
     font-family: 'Comic Sans MS';
 }
 
